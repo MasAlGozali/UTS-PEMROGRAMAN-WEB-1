@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar - TechVision Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-rocket-takeoff"></i> TechVision
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#layanan">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2" href="login.html">Masuk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="py-5 d-flex align-items-center" style="min-height: auto;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card shadow-lg border-0 rounded-lg">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <i class="bi bi-person-plus text-primary" style="font-size: 48px;"></i>
+                                <h2 class="card-title mt-3 fw-bold">Buat Akun Baru</h2>
+                                <p class="text-muted">Bergabunglah dengan TechVision Solutions</p>
+                            </div>
+
+                            <!-- Alert Messages -->
+                            <div id="error-alert" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                                <strong><i class="bi bi-exclamation-circle"></i> Gagal!</strong>
+                                <span id="error-message"></span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+
+                            <div id="success-alert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                                <strong><i class="bi bi-check-circle"></i> Registrasi Berhasil!</strong>
+                                <span>Anda akan diarahkan ke halaman login dalam 2 detik...</span>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                            </div>
+
+                            <!-- Register Form -->
+                            <form id="registerForm" onsubmit="handleRegister(event)">
+                                <div class="mb-3">
+                                    <label for="fullname" class="form-label fw-bold">Nama Lengkap</label>
+                                    <input type="text" class="form-control form-control-lg" id="fullname" 
+                                           placeholder="Masukkan nama lengkap" required>
+                                    <small class="text-danger" id="fullname-error" style="display: none;">
+                                        Nama lengkap tidak boleh kosong
+                                    </small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-bold">Email</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" 
+                                           placeholder="Masukkan email" required>
+                                    <small class="text-danger" id="email-error" style="display: none;">
+                                        Format email tidak valid
+                                    </small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label fw-bold">Nomor Telepon</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone" 
+                                           placeholder="Masukkan nomor telepon" required>
+                                    <small class="text-danger" id="phone-error" style="display: none;">
+                                        Nomor telepon tidak boleh kosong
+                                    </small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="company" class="form-label fw-bold">Nama Perusahaan</label>
+                                    <input type="text" class="form-control form-control-lg" id="company" 
+                                           placeholder="Masukkan nama perusahaan">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="reg-username" class="form-label fw-bold">Username</label>
+                                    <input type="text" class="form-control form-control-lg" id="reg-username" 
+                                           placeholder="Masukkan username" required>
+                                    <small class="text-danger" id="username-error" style="display: none;">
+                                        Username tidak boleh kosong
+                                    </small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="reg-password" class="form-label fw-bold">Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="reg-password" 
+                                           placeholder="Masukkan password (minimal 6 karakter)" required>
+                                    <small class="text-danger" id="password-error" style="display: none;">
+                                        Password minimal 6 karakter
+                                    </small>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="confirm-password" class="form-label fw-bold">Konfirmasi Password</label>
+                                    <input type="password" class="form-control form-control-lg" id="confirm-password" 
+                                           placeholder="Konfirmasi password" required>
+                                    <small class="text-danger" id="confirm-error" style="display: none;">
+                                        Password tidak sesuai
+                                    </small>
+                                </div>
+
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                                    <label class="form-check-label" for="agreeTerms">
+                                        Saya setuju dengan Syarat & Ketentuan
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">
+                                    <i class="bi bi-person-check"></i> Daftar
+                                </button>
+                            </form>
+
+                            <hr class="my-4">
+
+                            <p class="text-center text-muted mb-0">
+                                Sudah punya akun? 
+                                <a href="login.html" class="fw-bold text-primary text-decoration-none">Masuk di sini</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 - TechVision Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">@Copyright by Student | UTS Pemrograman Web 1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="register-script.js"></script>
+</body>
+</html>

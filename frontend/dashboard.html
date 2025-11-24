@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TechVision Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="dashboard.html">
+                <i class="bi bi-rocket-takeoff"></i> TechVision
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#layanan">Layanan Saya</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profil">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white ms-2" href="index.html" onclick="logout()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="bg-gradient py-5 text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">Selamat Datang, <span id="welcome-name">Pengguna</span>!</h1>
+                    <p class="lead">Anda telah berhasil login ke dashboard TechVision Solutions. Kelola semua layanan dan data Anda di sini.</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="bi bi-person-circle" style="font-size: 80px; opacity: 0.8;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Stats Cards -->
+            <div class="row mb-5">
+                <div class="col-md-3 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-graph-up text-primary" style="font-size: 32px;"></i>
+                            <h5 class="card-title mt-3">Proyek Aktif</h5>
+                            <p class="h4 fw-bold text-primary">8</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-check-circle text-success" style="font-size: 32px;"></i>
+                            <h5 class="card-title mt-3">Proyek Selesai</h5>
+                            <p class="h4 fw-bold text-success">23</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-clock-history text-warning" style="font-size: 32px;"></i>
+                            <h5 class="card-title mt-3">Total Jam Support</h5>
+                            <p class="h4 fw-bold text-warning">156</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-star-fill text-info" style="font-size: 32px;"></i>
+                            <h5 class="card-title mt-3">Rating</h5>
+                            <p class="h4 fw-bold text-info">4.8/5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Section -->
+            <div class="mb-5">
+                <h3 class="fw-bold mb-4" id="layanan">Layanan Berlangganan Anda</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title">Cloud Computing</h5>
+                                    <span class="badge bg-success">Aktif</span>
+                                </div>
+                                <p class="card-text text-muted">Premium Package - Unlimited Storage</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <strong>$299/bulan</strong>
+                                    <button class="btn btn-sm btn-outline-primary">Kelola</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title">Cybersecurity</h5>
+                                    <span class="badge bg-success">Aktif</span>
+                                </div>
+                                <p class="card-text text-muted">Enterprise Protection Suite</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <strong>$199/bulan</strong>
+                                    <button class="btn btn-sm btn-outline-primary">Kelola</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <h5 class="card-title">Technical Support</h5>
+                                    <span class="badge bg-success">Aktif</span>
+                                </div>
+                                <p class="card-text text-muted">24/7 Priority Support</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <strong>$99/bulan</strong>
+                                    <button class="btn btn-sm btn-outline-primary">Kelola</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div>
+                <h3 class="fw-bold mb-4" id="profil">Profil Anda</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Informasi Akun</h5>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="profile-name" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Email</label>
+                                    <input type="email" class="form-control" id="profile-email" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Nomor Telepon</label>
+                                    <input type="tel" class="form-control" id="profile-phone" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Perusahaan</label>
+                                    <input type="text" class="form-control" id="profile-company" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="card-title mb-4">Informasi Langganan</h5>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Status Langganan</label>
+                                    <p class="text-success"><i class="bi bi-check-circle"></i> Aktif</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Tanggal Bergabung</label>
+                                    <p id="join-date">-</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Paket Saat Ini</label>
+                                    <p>Premium Package</p>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Total Pembayaran</label>
+                                    <p>$597/bulan</p>
+                                </div>
+                                <button class="btn btn-primary w-100">Kelola Pembayaran</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 - TechVision Solutions. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">@Copyright by Student | UTS Pemrograman Web 1</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard-script.js"></script>
+</body>
+</html>
