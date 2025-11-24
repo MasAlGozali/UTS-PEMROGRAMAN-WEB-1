@@ -1,4 +1,4 @@
-# TechVision Solutions - Website Project
+
 
 Ini adalah project website company profile yang dikembangkan untuk **UTS Pemrograman Web 1**. Website ini menampilkan halaman utama perusahaan teknologi, halaman detail layanan, fitur login/registrasi dengan validasi JavaScript, dan dashboard user.
 
@@ -37,13 +37,7 @@ Ini adalah project website company profile yang dikembangkan untuk **UTS Pemrogr
    - Daftar layanan yang berlangganan
    - Profil pengguna
 
-## 🎨 Desain & Styling
 
-- **Framework CSS**: Bootstrap 5.3.0
-- **Custom Styling**: CSS custom yang menarik dengan gradient, animations, dan responsive design
-- **Icons**: Bootstrap Icons untuk visual yang lebih menarik
-- **Color Scheme**: Professional blue gradient dengan accent colors
-- **Responsive**: Fully responsive untuk desktop, tablet, dan mobile
 
 ## 🔐 JavaScript Validation
 
@@ -151,14 +145,8 @@ Setelah login berhasil, Anda akan diarahkan ke dashboard dengan:
 **Kelas**: [Your Class]  
 **Mata Kuliah**: UTS Pemrograman Web 1  
 
-## 📧 Kontak & Support
 
-Jika ada pertanyaan atau masalah, silakan hubungi pengembang melalui GitHub Issues.
 
-## 📄 License
 
-Project ini adalah untuk tujuan akademik. Bebas untuk dipelajari dan dikembangkan lebih lanjut.
 
----
-
-**Dibuat dengan ❤️ untuk UTS Pemrograman Web 1**
+-
